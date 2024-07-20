@@ -1,35 +1,104 @@
-﻿﻿<!DOCTYPE html>
+﻿<!--
+╔══╗╔══╗╔══╗─╔══╗╔╗╔╗╔╗──╔╗───╔══╗╔╗╔╗╔╗──╔══╗╔══╗╔════╗╔═══╗───╔══╗╔══╗╔══╗╔══╗
+║╔═╝║╔╗║║╔╗╚╗╚╗╔╝║║║║║║──║║───║╔═╝║║║║║║──║╔═╝║╔╗║╚═╗╔═╝║╔══╝───╚═╗║║╔╗║╚═╗║╚═╗║
+║╚═╗║║║║║║╚╗║─║║─║║║║║╚╗╔╝║───║╚═╗║║║║║║──║╚═╗║╚╝║──║║──║╚══╗───╔═╝║║║║║╔═╝║╔═╝║
+╚═╗║║║║║║║─║║─║║─║║║║║╔╗╔╗║───╚═╗║║║║║║║──║╔═╝║╔╗║──║║──║╔══╝───║╔═╝║║║║║╔═╝║╔═╝
+╔═╝║║╚╝║║╚═╝║╔╝╚╗║╚╝║║║╚╝║║───╔═╝║║╚╝║║╚═╗║║──║║║║──║║──║╚══╗───║╚═╗║╚╝║║╚═╗║╚═╗
+╚══╝╚══╝╚═══╝╚══╝╚══╝╚╝──╚╝───╚══╝╚══╝╚══╝╚╝──╚╝╚╝──╚╝──╚═══╝───╚══╝╚══╝╚══╝╚══╝
+-->
+
+<!DOCTYPE html>
 <html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-    <title>不才才 bucaicai</title>
-    <meta name="description" content="95后青年，后端开发者，略懂前端, 学生，实习，缺乏社会的毒打">
-    <meta name="keywords" content="Java,Spring,个人博客，微信小程序，博客">
+    <title>豆子</title>
+    <meta name="description" content="00后青年，想学习前端, 学生，缺乏社会的毒打">
+    <meta name="keywords" content="Java,Spring,个人博客，博客，动漫，免费，api，API，html，音乐，图片，二次元">
     <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="static/css/index.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.css">
+    <link href="img/favicon.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/APlayer.min.css">
+    <link rel="stylesheet" href="https://lxmb.oss-cn-beijing.aliyuncs.com/404/tc.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript">
-        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
-            alert('朋友，上古浏览器不支持呢~');
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //这个网站不支持石器时代的IE（误）
+            alert('朋友，上古浏览器不支持呢~ 建议使用Chrome或Edge访问');
         }
     </script>
+    <style>
+    .gotop,.gotopdiv{
+        position: fixed;
+    	bottom: 20px;
+        width: 52px;	
+        display: none;
+        height: 52px;    
+    	right: 100px;
+        z-index: 999;
+    	}
+    
+    .gotopdiv{
+        background: #60BF8B;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        width: 52px;
+        height: 55px;
+        color: #fff;
+        font-size: 15px;
+    }
+    .gotopdiv span{display: inline-block;
+    padding: 10px;
+    position: relative;
+    }
+    </style>
+    <script>
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?890c1434659374963cd8adab88157d9b";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+    </script>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    <script>LA.init({id:"KDkN66E84RdmXq4m",ck:"KDkN66E84RdmXq4m"})</script>
 </head>
 
 <body>
+    <!--
+    <div class="layer"></div>
+    <div id="globalAd">
+        <div id='hero-img' style="background-color: #1a95ff;background: linear-gradient(to left, #5dadf3 0, #4583ca 100%);"></div>
+        <div id='profile-img'>
+            <img src="https://vip1.loli.io/2022/05/12/h3BPzdLogCeptfA.jpg" /></div>
+    <div id='content'>
+            <p style="font-size: 16px;font-weight: bold;">重大公告</p>
+            <p>本站预计于2024年2月4日开始修复动漫板块和一些已知问题</p>
+            <p>预计于2024年2月6日修复完成，届时您即可观看原有的动漫了！</p>
+            <p>修复期间可能会出现无法访问的问题，给您带来的不便请你谅解</p>
+            <p>本弹窗预计将于2024年2月7日停止弹出</p>
+            <p>————豆子</p>
+            <p>2024.1.29</p>
+            <p>(本弹窗每日只弹出一次)</p>
+            <a onclick="closeGlobalAd();" class="btn btn-default" rel='nofollow'>朕已阅</a>
+        </div>
+    </div>
+    -->
     <div id="body-wrap">
-        <nav class="not_index_bg" id="nav" style="background-image:url(https://api.ixiaowai.cn/api/api.php)">
+        <nav class="not_index_bg" id="nav" style="background-image:url(https://img.moehu.org/pic.php?id=pc)">
             <div id="page_site-info">
                 <div id="site-title">
                     <span class="blogtitle"></span>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script src="js/typed.js"></script>
                     <script>
                         var typed = new Typed(".blogtitle", {
-                            strings: ['求知若饥，虚心若愚', 'Stay Hungry Stay Foolish'],
+                            strings: ['我爱你们、这句话绝对不是谎言呢...', '愛してる，これは絶対嘘じゃない...'],
                             startDelay: 300,
                             typeSpeed: 100,
                             loop: true,
@@ -47,13 +116,14 @@
                         <div class="card-content">
                             <div class="card-info-avatar is-center">
                                 <img class="avatar-img"
-                                    src="https://cdn.jsdelivr.net/gh/laoxuai/assert/images/20200125221102.png"
+                                    src="img/head-portrait.png"
                                     alt="avatar">
-                                <div class="author-info__name">Bucaicai</div>
-                                <div class="author-info__description">95后青年，后端开发者，略懂前端, <s>学生，实习</s>，缺乏社会的毒打</div>
+                                <div class="author-info__name">豆子</div>
+                                <div class="author-info__description">00后大学生，编程爱好者，正在学习 <s>c++</s> 后端开发，学生，缺乏社会的毒打</div>
+                                <p class="titma animated"><span id="span">本站已运行: 00天0小时00分00秒</span></p>
                             </div>
                             <div class="card-info-social-icons is-center">
-                                <a class="social-icon" href="https://github.com/laoxuai" target="_blank">
+                                <a class="social-icon" href="https://github.com/豆子" target="_blank">
                                     <i class="fa fa-github"></i>
                                 </a>
                             </div>
@@ -94,6 +164,82 @@
                                     <div class="webinfo-site-name">本站总访问量 :</div>
                                     <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
                                 </div>
+                                <div>
+                                    <div>实时更新</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="❤" aria-hidden="true">❤</i>
+                                <span>个人博客</span>
+                            </div>
+                            <div class="webinfo-item">
+                            <a>没有博客啦</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                <span>公告</span>
+                            </div>
+                            <div class="webinfo-item">
+                                <div class="webinfo-site-name">2022/10/31-在本站功能区更新<a href="tools/randomimg" target="_blank">随机图片生成器</a></div>
+                                <div class="webinfo-site-name">2022/8/21-更新网页版扫雷功能</div>
+                                <div class="webinfo-site-name">2022/7/21-由于移动端和PC端浏览器算法不同，所以左下角live2d形象可能无法正常在移动端显示，如果特别想看请使用电脑端打开本网站</div>
+                                <div class="webinfo-site-name">2022/7/21-新版网站上线</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                                      
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="☀" aria-hidden="true">☀</i>
+                                <span>您可以通过以下方式联系站长</span>
+                            </div>
+                            <div class="webinfo-item">
+                                <a>bilibili：</a><a href="https://space.bilibili.com/194603634?spm_id_from=333.1007.0.0" target="_blank">豆子<br>
+                                <a>QQ:</a><a href="https://qm.qq.com/q/R9cNeXHNWq" target="_blank">2598465516<br>
+                                <a>Telegram:</a><a href="https://t.me/豆子" target="_blank">豆子<br>
+                                                           </div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="►" aria-hidden="true">►</i>
+                                <span>Tips</span>
+                            </div>
+                            <div class="webinfo-item">
+                                <a>#你知道吗？这个网站总是在悄悄更新哦~</a><br>
+                                <a>#众所周知，没有BUG的代码是不完美的！</a><br>
+                                <a>#你指尖跃动的电光,是我此生不变的信仰,唯我超电磁炮永世长存！</a><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <i class="▪" aria-hidden="true">▪</i>
+                            <a>下面是萌萌计数器-开始计数日期：2024-7-21</a><br>
+                            <object type="image/svg+xml" data="https://count.kjchmc.cn/get/@Sodium?theme=rule34"></object>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="▪" aria-hidden="true">▪</i>
+                                <span>豆子个人网站</span>
+                            </div>
+                            <div class="webinfo-item">
+                                <a>为了确保您能够充分使用本网站的所有功能，请联系站主获取。</a><br>
                             </div>
                         </div>
                     </div>
@@ -101,130 +247,202 @@
                 <article id="page">
                     <div class="article-container">
                         <h2>音乐</h2>
-                        <meting-js auto="https://y.qq.com/n/yqq/playlist/7713574197.html">
-                        </meting-js>
+                        <!--音乐播放器-->
+                        <div id="aplayer"></div>
+                        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/APlayer.min.js"></script>
+                        <script src="js/Music.list.js"></script>
                         <hr>
-
+                        <h2>本站功能 - 一定要尝试用用 >_<</h2>
+                        <div class="tool">
+                            <!--<a href="https://sodium.ren/novel/" target="_blank">自运营小说&持续更新中&</a><br>-->
+                                  <a href="comment" target="_blank">千万别点这个链接！</a><br>
+                        </div>
+                        <hr>
+                        <h2>个人博客</h2>
+                        <div class="">
+                            <p>点击图片跳转至博客</p>
+                            <a href="http://blog.sodium.ren/" target="_new"><img src="img/b1.jpg" alt="图片加载失败！请联系管理员！" height="234px" width="480px"></a><br>
+                            <a href="http://blog.sodium.ren/" target="_new"><img src="img/b2.png" alt="图片加载失败！请联系管理员！" height="212px" width="480px"></a><br>
+                            <a href="http://blog.sodium.ren/" target="_new"><img src="img/b3.png" alt="图片加载失败！请联系管理员！" height="95px" width="480px"></a><br>
+                        </div>
+                        <hr>
                         <h2>技能</h2>
                         <div class="skillbox">
                             <div class="skillbar">
                                 <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 75%">
-                                    <span>Java</span>
+                                    style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 100%">
+                                    <span>原神</span>
                                 </div>
-                                <div class="skill-bar-percent">75%</div>
+                                <div class="skill-bar-percent">100%</div>
                             </div>
                             <div class="skillbar">
                                 <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 40%">
-                                    <span>前端</span>
-                                </div>
-                                <div class="skill-bar-percent">40%</div>
-                            </div>
-                            <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 60%">
-                                    <span>Spring</span>
-                                </div>
-                                <div class="skill-bar-percent">60%</div>
-                            </div>
-                            <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-                                    <span>SpringMVC</span>
-                                </div>
-                                <div class="skill-bar-percent">70%</div>
-                            </div>
-                            <div class="skillbar">
-                                <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #00BCD4 0%, #f54009 100%); width: 80%">
-                                    <span>SpringBoot</span>
+                                    style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 100%">
+                                    <span>鸣潮</span>
                                 </div>
                                 <div class="skill-bar-percent">80%</div>
                             </div>
                             <div class="skillbar">
                                 <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 60%">
-                                    <span>Mybatis</span>
+                                    style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 15%">
+                                    <span>C++</span>
                                 </div>
-                                <div class="skill-bar-percent">60%</div>
+                                <div class="skill-bar-percent">5%</div>
                             </div>
                             <div class="skillbar">
                                 <div class="skillbar-title"
-                                    style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-                                    <span>数据结构与算法</span>
+                                    style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
+                                    <span>HTML</span>
                                 </div>
-                                <div class="skill-bar-percent">75%</div>
+                                <div class="skill-bar-percent">70%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #00BCD4 0%, #f54009 100%); width: 40%">
+                                    <span>Python</span>
+                                </div>
+                                <div class="skill-bar-percent">40%</div>
+                            </div>
+                            <div class="skillbar">
+                                <div class="skillbar-title"
+                                    style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 95%">
+                                    <span>吹牛逼</span>
+                                </div>
+                                <div class="skill-bar-percent">95%</div>
                             </div>
                         </div>
-
                         <hr>
-                        <h2>刷题</h2>
+                        <h2>高质量网站</h2>
                         <div class="tool">
-                            <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br>
-                            <a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank">剑指 Offer</a>
+                            <a href="jtow/JPT-dos.zczc.cz.html" target="_blank">在线DOS游戏（上百款DOS游戏任你选，回忆童年时光）</a><br>
+                            <a href="jtow/JPT-tooool.org.html" target="_blank">程序员导航（程序员多功能导航）</a><br>
+                            <a href="jtow/JPT-adzhp.cn.html" target="_blank">爱达杂货铺（多功能网站导航）</a><br>
+                            <a href="jtow/JPT-ifeve.com.html" target="_blank">并发编程网（程序员学习网站）</a><br>
+                            <a href="jtow/JPT-cowtransfer.com.html" target="_blank">奶牛快传（不限速网盘，10GB免费空间）</a><br>
+                            <a href="jtow/JPT-jujuso.com.html" target="_blank">优聚搜（免费盘搜工具）</a><br>
+                            <a href="jtow/JPT-m3u8.html" target="_blank">m3u8 Downloader（m3u8视频在线提取工具）</a><br>
+                            <a href="jtow/JPT-iconpark.oceanengine.com.html" target="_blank">IcoPark（免费图标设计网站）</a><br>
+                            <a href="jtow/JPT-ifonts.com.html" target="_blank">ifonts（字体下载网站，有免费可商用分类）</a><br>
                         </div>
-
                         <hr>
-                        <h2>收藏</h2>
+                        <h2>我的BILIBILI</h2>
                         <div class="tool">
-                            <a href="http://tooool.org/" target="_blank" rel="noopener noreferrer">程序员导航、</a>
-                            <a href="https://adzhp.cn/" target="_blank" rel="noopener noreferrer">爱达杂货铺、</a>
-                            <a href="http://ifeve.com/" target="_blank" rel="noopener noreferrer">并发编程网</a>
+                            <a href="https://space.bilibili.com/194603634" target="_blank">豆子的空间</a><br>
+                            <hr>
+                        <h2>源码及API接口</h2>
+                        <div class="tool">
+                            <a href="https://github.com/weenxu/home" target="_blank">网页框架、</a>
+                            <a href="https://github.com/MoePlayer/APlayer" target="_blank">音乐播放器、</a>
+                            <a href="https://github.com/mattboldt/typed.js/" target="_blank">typed 打字机特效、</a>
+                            <a href="https://github.com/stevenjoezhang/live2d-widget" target="_blank">看板娘、</a>
+                            <a href="https://api.ixiaowai.cn/" target="_blank">随机图片、</a>
+                            <a href="https://www.jinrishici.com/" target="_blank">今日诗词、</a>
+                            <a href="https://hitokoto.cn/" target="_blank">一言</a>
+                        </div>
                         </div>
                     </div>
                 </article>
             </div>
         </main>
+        <img src="img/toTop.png" alt="" class="gotop" >
+        <div class="gotopdiv" style="display: none;"><span>Top</span></div> <!--返回顶部-->
         <footer id="footer">
             <div id="footer-wrap">
-                <div class="copyright">&copy;2019 - 2021 BY Bucaicai</div>
+                <div class="copyright">&copy;Copyright 2022-2024 <a href="https://space.bilibili.com/194603634" target="_blank">豆子</a></div>
+                <a href="https://icp.gov.moe/?keyword=20230100" target="_blank">萌ICP备00000000号（没有备案啦）</a>
+                <div><a>▪</a></div>
+                <div><a>▪</a></div>
+                <div><a>▪</a></div>
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    
+    <!-- 不蒜子 -->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
+    
+    <script src="js/instantpage.js" type="module"></script>
+    <script src="js/lazysizes.min.js" async></script>
+    
     <!-- aplayer、meting -->
     <!-- require APlayer -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="css/APlayer.min.css">
+    <script src="js/APlayer.min.js"></script>
+    
     <!-- require MetingJS -->
-    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <script src="js/Meting.min.js"></script>
 
     <!-- nplayer -->
-    <script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
+    <script src="js/index.min.js"></script>
 
     <!--   一言、今日诗词   -->
     <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-    <!-- 看板娘 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
-
     <!--鼠标点击效果-->
     <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+    
+    <!--返回顶部-->
+    <script>
+        $(document).on('mouseenter','.gotop',function () {
+            var top_scroll = $(document).scrollTop();
+            if (top_scroll > 0) {
+                $(this).next().show();
+                $(this).hide();
+            }
+        })
+        $(document).on('mouseleave','.gotopdiv',function () {
+            var top_scroll = $(document).scrollTop();
+            if (top_scroll > 0) {
+                $(this).prev().show()
+                $(this).hide();
+            }
+        })
+    
+    
+    
+        //点击返回顶部
+        $(document).on('click','.gotopdiv,.gotop',function () {
+            $(document).scrollTop(0);
+            $('.gotop').hide()
+            $('.gotopdiv').hide();
+        })
+        //滚动时出现返回顶部
+        $(window).scroll(function () {
+            var top_scroll = $(document).scrollTop();
+            if (top_scroll > 0) {
+                $('img.gotop').css({ 'display': 'block', 'cursor': 'pointer' });
+                $('.gotopdiv').css({ 'display': 'none' });
+    
+            } else {
+                $('img.gotop,.gotopdiv').css({ 'display': 'none' })
+            }
+    
+        })
+    </script>
 
+    <!-- 看板娘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+    <script src="js/autoload.js"></script>
+    
     <script type="text/javascript">
         console.clear();
-        console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
-        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/laoxuai");
+        console.log("%c 朋友，你看控制台干嘛~", "background:#24272A; color:#ffffff", "");
+        console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/豆子");
         console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
 
 
         (function ($) {
             $.fn.snow = function (options) {
-                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
+                var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('アイ'),
                     documentHeight = $(document).height(),
                     documentWidth = $(document).width(),
                     defaults = {
                         minSize: 10,
                         maxSize: 20,
                         newOn: 1000,
-                        flakeColor: "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+                        flakeColor: "#DA007D" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
                     },
                     options = $.extend({}, defaults, options);
                 var interval = setInterval(function () {
@@ -252,11 +470,12 @@
         $(function () {
             $.fn.snow({
                 minSize: 5, /* 定义雪花最小尺寸 */
-                maxSize: 50,/* 定义雪花最大尺寸 */
-                newOn: 800  /* 定义密集程度，数字越小越密集 */
+                maxSize: 20,/* 定义雪花最大尺寸 */
+                newOn: 700  /* 定义密集程度，数字越小越密集 */
             });
         });
 
+<!--
         // 浏览器搞笑标题
         var OriginTitle = document.title;
         var titleTime;
@@ -267,14 +486,133 @@
                 clearTimeout(titleTime);
             }
             else {
-                $('[rel="icon"]').attr('href', "/favicon.ico");
+                $('[rel="icon"]').attr('href', "img/favicon.ico");
                 document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~' + OriginTitle;
                 titleTime = setTimeout(function () {
                     document.title = OriginTitle;
                 }, 2000);
             }
         });
+-->
     </script>
+    <!--标题彩蛋-->
+    <script>
+        document.addEventListener('visibilitychange', function () {
+            var isHidden = document.hidden;
+            if (isHidden) {
+                setTimeout(() => {
+                    document.title = '╭(°A°`)╮ 页面崩溃啦 ~';
+                }, 1000)
+                ;
+            } else {
+                document.title = '(ฅ>ω<*ฅ) 噫又好啦 ~';
+                setTimeout(() => {
+                    document.title = '豆子';
+                }, 3000)
+            }
+        });
+    </script>
+    
+    <!--运行天数js-->
+	<script type="text/javascript">
+		runtime();
+		function runtime() {
+			X = new Date("4/16/2022 21:29:00"); //网站创建时间 月/日/年 时：分：秒
+			Y = new Date();
+			T = (Y.getTime() - X.getTime());
+			M = 24 * 60 * 60 * 1000;
+			a = T / M;
+			A = Math.floor(a);
+			b = (a - A) * 24;
+			B = Math.floor(b);
+			c = (b - B) * 60;
+			C = Math.floor((b - B) * 60);
+			D = Math.floor((c - C) * 60);
+			//信息写入到DIV中
+			span.innerHTML = "本站已运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+		}
+		setInterval(runtime, 1000);
+	</script>
+<!--运行天数js结束-->
+<script>
+jQuery.cookie = function(name, value, options) {
+if(typeof value != 'undefined') {
+options = options || {};
+if(value === null) {
+value = '';
+options.expires = -1;
+}
+var expires = '';
+if(options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+var date;
+if(typeof options.expires == 'number') {
+date = new Date();
+var totalTime = 24 * 3600;
+var hour = date.getHours();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+var pastTime = 3600 * hour + 60 * minutes + seconds;
+var leftTime = totalTime - pastTime;
+date.setTime(date.getTime() + (options.expires * leftTime * 1000));
+} else {
+date = options.expires;
+}
+expires = '; expires=' + date.toUTCString();
+}
+var path = options.path ? '; path=' + (options.path) : '';
+var domain = options.domain ? '; domain=' + (options.domain) : '';
+var secure = options.secure ? '; secure' : '';
+document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+} else {
+var cookieValue = null;
+if(document.cookie && document.cookie != '') {
+var cookies = document.cookie.split(';');
+for(var i = 0; i < cookies.length; i++) {
+var cookie = jQuery.trim(cookies[i]);
+if(cookie.substring(0, name.length + 1) == (name + '=')) {
+cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+break;
+}
+}
+}
+return cookieValue;
+}
+};
+$(function() {
+var COOKIE_NAME = "erdangjiade";
+if($.cookie(COOKIE_NAME)) {
+$(".layer").hide();
+$("#globalAd").hide();
+} else {
+var erdangjiadeH = $(window).height();
+var erdangjiadeW = $(window).width();
+$(".layer").show();
+$("#globalAd").css({
+'top': erdangjiadeH / 2 - $("#globalAd").height() / 2,
+'left': erdangjiadeW / 2 - $("#globalAd").width() / 2
+});
+$("#globalAd").slideDown(300, function() {
+setTimeout("closeGloableAd()", '300000');
+});
+$.cookie(COOKIE_NAME, "erdangjiade", {
+path: '/',
+expires: 1
+});
+}
+});
+
+function closeGlobalAd() {
+$('#globalAd').hide();
+$('.layer').hide();
+
+}
+
+function redirectUrlToActive() {
+$('#globalAd').hide();
+$('.layer').hide();
+}
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a6124a9ff2b93e8","version":"2024.7.0","r":1,"token":"05e0951b29c94495bb576f250ff3ae25","serverTiming":{"name":{"cfL4":true}}}' crossorigin="anonymous"></script>
 </body>
 
 </html>
